@@ -27,10 +27,11 @@ def ran(client, message) :
       file.close()
       for line in lines:
         if line == "nocheat": 
-            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ']))
+            message.reply(random.choice([' 💫 Result : **Head** ', '💫 Result :**Tail** ']))
         if line == "cheat":
             message.reply("💫 Result : **Head**")
-        else message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ']))
+        
+        else message.reply(random.choice([' 💫 Result : **Head** ', '💫 Result :**Tail** ']))
 
 
 
