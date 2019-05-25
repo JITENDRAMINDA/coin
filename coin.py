@@ -15,26 +15,22 @@ def ran(client, message) :
       lines = file.readlines()
       file.close()
       for line in lines:
-        if line == "nocheat": 
-            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Tail** ']))
         if line == "cheat":
             message.reply("💫 Result : **Head**")
         else:
-            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ']))
-
+            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
+  
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
       file = open("sure.txt" , "r")
       lines = file.readlines()
       file.close()
       for line in lines:
-        if line == "nocheat": 
-            message.reply(random.choice([' 💫 Result : **Head** ', '💫 Result :**Tail** ']))
         if line == "cheat":
             message.reply("💫 Result : **Head**")
         
         else:
-            message.reply(random.choice([' 💫 Result : **Head** ', '💫 Result :**Tail** ']))
-
+            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
+  
 
 
 @app.on_message(Filters. command('status'))
