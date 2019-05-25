@@ -5,35 +5,7 @@ import random
 from typing import Optional, List
 
 
-
-
-
-
-
-
-app = Client('835349563:AAEraMgAMwRFzOdv7kMLVOYSRgYBL-mlTwA')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app = Client('863961400:AAGtI_itRCKjAZaBftigrKcwAAvMdbuCIEg')
 
 
 @app.on_message(Filters. command('toss'))
