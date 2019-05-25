@@ -47,6 +47,8 @@ def ran(client, message) :
             message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Tail** ']))
         if line == "cheat":
             message.reply("💫 Result : **Head**")
+        else message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ']))
+
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
       file = open("sure.txt" , "r")
       lines = file.readlines()
@@ -56,7 +58,10 @@ def ran(client, message) :
             message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ']))
         if line == "cheat":
             message.reply("💫 Result : **Head**")
-   
+        else message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ']))
+
+
+
 @app.on_message(Filters. command('status'))
 def ran(client, message) :
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
