@@ -254,5 +254,5 @@ def ran(client, message):
 
 app.run()
 
-while 1:
-    time.sleep(10)
+
+    
