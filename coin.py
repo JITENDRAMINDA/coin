@@ -121,6 +121,7 @@ def ran(client , message):
 
 @app.on_message(Filters. private)
 def ran( client, message) :
+  message.reply( 'This is teen patti bot with roll, dice, toss and too many features for buy Contact - @google_console ✓✓ ')
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 
@@ -164,16 +165,6 @@ def ran(client, message):
     message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
    if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
     message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
-
-
-
-
-@app.on_message(Filters.private)
-def ran(client, message):
-    message.reply( 'This is teen patti bot with roll, dice, toss and too many features for buy Contact - @google_console ✓✓ ')
- 
-
-
 
 
 @app.on_message(Filters.command('roll'))
