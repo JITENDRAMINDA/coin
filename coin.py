@@ -19,7 +19,8 @@ def ran(client, message) :
             message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Tail** ']))
         if line == "cheat":
             message.reply("💫 Result : **Head**")
-        else message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ']))
+        else:
+            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ']))
 
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
       file = open("sure.txt" , "r")
@@ -31,7 +32,8 @@ def ran(client, message) :
         if line == "cheat":
             message.reply("💫 Result : **Head**")
         
-        else message.reply(random.choice([' 💫 Result : **Head** ', '💫 Result :**Tail** ']))
+        else:
+            message.reply(random.choice([' 💫 Result : **Head** ', '💫 Result :**Tail** ']))
 
 
 
