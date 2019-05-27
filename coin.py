@@ -90,7 +90,7 @@ def ran(client , message):
     message.reply("Cheating mode off! ")
 
 
-@app.on_message(Filters. private)
+@app.on_message
 def ran( client, message) :
   message.reply( 'This is teen patti bot with roll, dice, toss and too many features for buy Contact - @google_console ✓✓ ')
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
