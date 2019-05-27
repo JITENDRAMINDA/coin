@@ -27,10 +27,12 @@ def ran(client, message) :
       for line in lines:
         if line == "cheat":
             message.reply("💫 Result : **Head**")
-        
+            client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+
         else:
             message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
-  
+            client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+
 
 
 @app.on_message(Filters. command('status'))
@@ -90,7 +92,7 @@ def ran(client , message):
     message.reply("Cheating mode off! ")
 
 
-@app.on_message(Filters.chat)
+@app.on_message(Filters. private)
 def ran( client, message) :
   message.reply( 'This is teen patti bot with roll, dice, toss and too many features for buy Contact - @google_console ✓✓ ')
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
