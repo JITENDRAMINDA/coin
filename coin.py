@@ -205,15 +205,15 @@ def ran(client, message):
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    if len(message.text.split(' ')) > 1:
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']))
+    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1]))
    else:
     message.reply('Please write user first name after command')
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    if len(message.text.split(' ')) > 1:
-    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
-)
+    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1]))
+
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
    else:
     message.reply('Please write game name after command')
