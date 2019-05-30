@@ -10,6 +10,7 @@ app = Client('863961400:AAGtI_itRCKjAZaBftigrKcwAAvMdbuCIEg')
 
 @app.on_message(Filters. command('toss'))
 def ran(client, message) :
+   if not message.chat.id == -1001257500398:
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
       file = open("sure.txt" , "r")
       lines = file.readlines()
@@ -157,13 +158,14 @@ def ran(client, message):
 
 @app.on_message(Filters.command('roll'))
 def ran(client, message):
- if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-  if len(message.text.split(' ')) > 1:
-   message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
-   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+ if not message.chat.id == -1001257500398:
+  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
+    if len(message.text.split(' ')) > 1:
+     message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
+     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
-  else:
-   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+   else:
+    client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
    message.reply('Please set a range!')
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
   if len(message.text.split(' ')) > 1:
@@ -202,6 +204,7 @@ def ran(client, message):
 
 @app.on_message(Filters. command('dice'))
 def ran(client, message):
+ if not message.chat.id == -1001257500398:
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    if len(message.text.split(' ')) > 1:
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
@@ -241,6 +244,7 @@ def ran(client, message):
 
 @app.on_message(Filters. command('show'))
 def ran(client, message):
+ if not message.chat.id == -1001257500398:
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    if len(message.text.split(' ')) > 1:
     message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
