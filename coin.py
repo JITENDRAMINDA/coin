@@ -338,11 +338,10 @@ def ran(client, message):
 def ran(client,message):
  if message.from_user.id == 491634139:
   if len(message.text.split(' ')) > 1:
-    message.reply('I am going away bye')
-    client.leave_chat(message.chat.id)
-  else:
-    message.reply('I am going away bye')
     client.leave_chat(message.text.split(' '))
+  else:
+    client.leave_chat(message.chat.id)
+    
 
 
 
