@@ -8,17 +8,6 @@ from typing import Optional, List
 app = Client('863961400:AAGtI_itRCKjAZaBftigrKcwAAvMdbuCIEg')
 
 
-from pyrogram import Client, Filters, Emoji
-import random
-
-
-from typing import Optional, List
-
-app = Client('835349563:AAEraMgAMwRFzOdv7kMLVOYSRgYBL-mlTwA')
-
-
-
-
 @app.on_message(Filters. command('toss'))
 def ran(client, message) :
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
@@ -337,13 +326,15 @@ def ran(client, message):
 
 
 
+
 @app.on_message(Filters. command('leavechat'))
 def ran(client,message):
  if message.from_user.id == 491634139:
   if len(message.text.split( )) > 1:
-    client.leave_chat(message.text.split( ))
+    client.leave_chat(int(message.text.split(' ')[1]))
   else:
     client.leave_chat(message.chat.id)
+    
     
 
 
