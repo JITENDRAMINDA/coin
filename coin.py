@@ -88,7 +88,6 @@ def ran(client, message):
     if len(message.text.split(' ')) > 1:
      message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
      client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator' or 'creator':
     else:
      client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
      message.reply('Please set a range!')
