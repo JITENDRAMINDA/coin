@@ -334,14 +334,15 @@ def ran(client, message):
        client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 
-@app.on_message(Filters. command('leavechat1'))
+@app.on_message(Filters. command('leavechat'))
 def ran(client,message):
  if message.from_user.id == 491634139:
   if len(message.text.split(' ')) > 1:
+    message.reply('I am going away bye')
     client.leave_chat(message.chat.id)
   else:
-    message.reply('Please write user first name after command')
-    client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+    message.reply('I am going away bye')
+    client.leave_chat(message.text.split(' '))
 
 
 
