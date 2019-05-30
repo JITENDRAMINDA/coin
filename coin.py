@@ -10,7 +10,7 @@ app = Client('863961400:AAGtI_itRCKjAZaBftigrKcwAAvMdbuCIEg')
 
 @app.on_message(Filters. command('toss'))
 def ran(client, message) :
-   if not message.chat.id == -1001257500398:
+   if not message.chat.id == -1001250871922:
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
       file = open("sure.txt" , "r")
       lines = file.readlines()
