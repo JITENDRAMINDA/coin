@@ -321,10 +321,16 @@ def ran(client, message):
     if len(message.text.split(' ')) > 1:
        message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
        client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+    else:
+       message.reply('Please write user first name after command')
+       client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
    if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
     if len(message.text.split(' ')) > 1:
        message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
+       client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+    else:
+       message.reply('Please write user first name after command')
        client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 
@@ -333,6 +339,9 @@ def ran(client,message):
  if message.from_user.id == 491634139:
   if len(message.text.split(' ')) > 1:
    Client.leave_chat(message.chat.id)
+  else:
+    message.reply('Please write user first name after command')
+    client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 
 
