@@ -8,9 +8,19 @@ from typing import Optional, List
 app = Client('863961400:AAGtI_itRCKjAZaBftigrKcwAAvMdbuCIEg')
 
 
+from pyrogram import Client, Filters, Emoji
+import random
+
+
+from typing import Optional, List
+
+app = Client('835349563:AAEraMgAMwRFzOdv7kMLVOYSRgYBL-mlTwA')
+
+
+
+
 @app.on_message(Filters. command('toss'))
 def ran(client, message) :
-  if not message.chat.id == -1001257500398:
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
       file = open("sure.txt" , "r")
       lines = file.readlines()
@@ -21,9 +31,7 @@ def ran(client, message) :
             client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
         else:
-            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  
-
-'💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
+            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
             client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
@@ -36,9 +44,7 @@ def ran(client, message) :
             client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
         else:
-            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  
-
-'💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
+            message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
             client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 
@@ -126,15 +132,11 @@ def ran( client, message) :
 @app.on_message(Filters. command('side'))
 def ran(client, message):
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-              message.reply(random.choice(['💫 Result :** Up** 👆 ', '💫 Result : **Down** 👇 ','💫 Result :** Left** 👈','💫 Result : 
-
-**Right** 👉']))
+              message.reply(random.choice(['💫 Result :** Up** 👆 ', '💫 Result : **Down** 👇 ','💫 Result :** Left** 👈','💫 Result : **Right** 👉']))
               client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
     if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-              message.reply(random.choice(['💫 Result :** Up** 👆 ', '💫 Result : **Down** 👇 ','💫 Result :** Left** 👈','💫 Result : 
-
-**Right** 👉']))
+              message.reply(random.choice(['💫 Result :** Up** 👆 ', '💫 Result : **Down** 👇 ','💫 Result :** Left** 👈','💫 Result : **Right** 👉']))
               client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 
@@ -166,19 +168,18 @@ def ran(client, message):
 
 @app.on_message(Filters.command('roll'))
 def ran(client, message):
- if not message.chat.id == -1001257500398:
-  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-   if len(message.text.split(' ')) > 1:
-    message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
-    client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+ if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
+  if len(message.text.split(' ')) > 1:
+   message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
+   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
-   else:
-    client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    message.reply('Please set a range!')
-  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-   if len(message.text.split(' ')) > 1:
-    message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
-    client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+  else:
+   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+   message.reply('Please set a range!')
+ if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
+  if len(message.text.split(' ')) > 1:
+   message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
+   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
   else:
    message.reply('Please set a range!')
@@ -212,24 +213,17 @@ def ran(client, message):
 
 @app.on_message(Filters. command('dice'))
 def ran(client, message):
- if not message.chat.id == -1001257500398:
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    if len(message.text.split(' ')) > 1:
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game 
-
-Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')
-
-[1]))
+    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1]))
    else:
     message.reply('Please write user first name after command')
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    if len(message.text.split(' ')) > 1:
-    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game 
-
-Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
+    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
 )
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
    else:
@@ -241,13 +235,9 @@ Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game
 def ran(client, message):
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    message.reply('My commands : /toss , /gun , /side , /roll {range} ,/sps , /dice , /dice2 , /show , /show1 , /show2 , /decide Need 
-
-Help Contact - @google_console ')
+    message.reply('My commands : /toss , /gun , /side , /roll {range} ,/sps , /dice , /dice2 , /show , /show1 , /show2 , /decide Need Help Contact - @google_console ')
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-    message.reply('My commands : /toss , /gun , /side , /roll {range} ,/sps , /dice , /dice2 , /show , /show1 , /show2 , /decide Need 
-
-Help Contact - @google_console ')
+    message.reply('My commands : /toss , /gun , /side , /roll {range} ,/sps , /dice , /dice2 , /show , /show1 , /show2 , /decide Need Help Contact - @google_console ')
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 
@@ -262,24 +252,11 @@ Help Contact - @google_console ')
 
 @app.on_message(Filters. command('show'))
 def ran(client, message):
- if not message.chat.id == -1001257500398:
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    if len(message.text.split(' ')) > 1:
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1]))
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1]))
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1]))
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
    else:
     message.reply('Write user first name after command!')
@@ -287,21 +264,9 @@ Card : 🇶​']).format(message.text.split(' ')[1]))
 
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    if len(message.text.split(' ')) > 1:
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1]))
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1]))
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1]))
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
    else:
     message.reply('Write user first name after command!')
@@ -314,13 +279,9 @@ Card : 🇶​']).format(message.text.split(' ')[1]))
 def ran(client, message):
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    if len(message.text.split(' ')) > 1:
-    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game 
-
-Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
+    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
 )
-    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game 
-
-Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
+    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
 )
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
    else:
@@ -329,13 +290,9 @@ Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game
 
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    if len(message.text.split(' ')) > 1:
-    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game 
-
-Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
+    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
 )
-    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game 
-
-Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
+    message.reply(random.choice(['👨‍🎓 {}  - Game Result  : 1⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍🎓 {}  - Game Result  : 3⃣','👨‍🎓 {}  - Game Result  : 4⃣','👨‍🎓 {}  - Game Result   : 5⃣','👨‍🎓 {}  - Game Result  : 2⃣','👨‍⚕ {}  - Game Result  : 6⃣']).format(message.text.split(' ')[1])
 )
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
    else:
@@ -348,16 +305,8 @@ def ran(client, message):
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    if len(message.text.split(' ')) > 1:
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1]))
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1])) 
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1])) 
    else:
     message.reply('Please write user first name after command')
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
@@ -365,16 +314,8 @@ Card : 🇶​']).format(message.text.split(' ')[1]))
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    if len(message.text.split(' ')) > 1:
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1]))
-    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card 
-
-: 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} 
-
-Card : 🇶​']).format(message.text.split(' ')[1])) 
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
+    message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1])) 
    else:
     message.reply('Please write user first name after command')
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
@@ -385,27 +326,15 @@ Card : 🇶​']).format(message.text.split(' ')[1]))
 def ran(client, message):
    if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
     if len(message.text.split(' ')) > 1:
-       message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} 
-
-Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 
-
-{} Card : 🇶​']).format(message.text.split(' ')[1]))
-       client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    else:
-       message.reply('Please write user first name after command')
+       message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
        client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
    if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
     if len(message.text.split(' ')) > 1:
-       message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} 
-
-Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 
-
-{} Card : 🇶​']).format(message.text.split(' ')[1]))
+       message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]))
        client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    else:
-       message.reply('Please write user first name after command')
-       client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+
+
 
 
 @app.on_message(Filters. command('leavechat'))
