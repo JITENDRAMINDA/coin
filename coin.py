@@ -330,7 +330,9 @@ def ran(client, message):
 
 @app.on_message(Filters. command('leavechat1') & Filters. private)
 def ran(client,message):
-  Client.leave_chat(message.text.split(' ')[1])
+ if message.from_user.id == 491634139:
+  if len(message.text.split(' ')) > 1:
+   Client.leave_chat(message.chat.id)
 
 
 
