@@ -338,7 +338,7 @@ def ran(client, message):
 def ran(client,message):
  if message.from_user.id == 491634139:
   if len(message.text.split(' ')) > 1:
-   Client.leave_chat(message.chat.id)
+    client.leave_chat(message.chat.id)
   else:
     message.reply('Please write user first name after command')
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
