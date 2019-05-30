@@ -108,14 +108,11 @@ def ran( client, message) :
 
 @app.on_message(Filters. command('gun'))
 def ran( client, message) :
-    if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
+    if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator' or 'creator':
            message.reply(random.choice(['💫 Result : **AK47**😎', '💫 Result : **Ruger**💥 ']))
            client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
-    if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-           message.reply(random.choice(['💫 Result : **AK47**😎', '💫 Result : **Ruger**💥 ']))
-           client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-
+   
 
 
 
