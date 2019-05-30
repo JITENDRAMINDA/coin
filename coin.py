@@ -166,7 +166,7 @@ def ran(client, message):
 
     else:
      client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-   message.reply('Please set a range!')
+     message.reply('Please set a range!')
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    if len(message.text.split(' ')) > 1:
     message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
