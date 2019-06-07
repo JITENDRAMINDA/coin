@@ -324,6 +324,24 @@ def ran(client, message):
     message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
+@app.on_message(Filters.command('bowl'))
+def ran(client, message):
+ if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
+  if len(message.text.split(' ')) > 1:
+   message.reply(random.choice(["{} team score 1 run","{} team score 2 run","{} team score 3 run","{} team score 4 run","{} team score 6 run","{} team's 🚾🚾","No ball ","Dot ball","{} team's player Run out ","Wide ball"].format(message.text.split(' ')[1]))
+   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+
+  else:
+   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+   message.reply('Please set a range!')
+ if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
+  if len(message.text.split(' ')) > 1:
+   message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
+   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
+
+  else:
+   message.reply('Please set a range!')
+   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 @app.on_message(Filters.command('roll'))
 def ran(client, message):
