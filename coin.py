@@ -212,7 +212,7 @@ def ran(client, message):
           client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
           message.reply(random.choice(['👨‍🎓 Result: 1⃣','👨‍🎓 Result: 2⃣','👨‍🎓 Result: 3⃣','👨‍🎓 Result: 4⃣','👨‍🎓 Result: 5⃣','👨‍⚕ Result: 6⃣']))
           message.reply(random.choice(['👨‍🎓 Result: 1⃣','👨‍🎓 Result: 2⃣','👨‍🎓 Result: 3⃣','👨‍🎓 Result: 4⃣','👨‍🎓 Result: 5⃣','👨‍⚕ Result: 6⃣']))
-   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
+  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
     
           client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
           message.reply(random.choice(['👨‍🎓 Result: 1⃣','👨‍🎓 Result: 2⃣','👨‍🎓 Result: 3⃣','👨‍🎓 Result: 4⃣','👨‍🎓 Result: 5⃣','👨‍⚕ Result: 6⃣']))
