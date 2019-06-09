@@ -165,9 +165,9 @@ def ran(client, message):
 def ran(client, message):
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    message.reply('My commands : /toss , /gun , /side , /roll {range} ,/sps , /dice , /dice2 , /show , /show1 , /show2 , /decide Need Help Contact - @google_console ')
+    message.reply('My commands : /toss , /gun , /side , /roll {range} ,/sps , /dice , /dice2 , /show , /bowl  , /decide Need Help Contact - @google_console ')
   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-    message.reply('My commands : /toss , /gun , /side , /roll {range} ,/sps , /dice , /dice2 , /show , /show1 , /show2 , /decide Need Help Contact - @google_console ')
+    message.reply('My commands : /toss , /gun , /side , /roll {range} ,/sps , /dice , /dice2 , /show , /bowl , /decide Need Help Contact - @google_console ')
     client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 
