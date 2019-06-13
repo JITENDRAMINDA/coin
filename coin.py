@@ -33,14 +33,14 @@ def ran(client, message):
 def ran(client, message):
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
   if len(message.text.split(' ')) > 1:
-   message.reply(random.choice(["**Ball {}st**: Score **1** Run ✅✅","**Ball {}st**: Score **2** Run ✅✅","**Ball {}st**: Score **3** Run ✅✅","**Ball {}st**: Score **4** Run ✅✅","**Ball {}st**: Score **6** Run ✅✅","**Ball {}st**: 🚾** Wicket Wicket **🚾","No ball "," **Ball {}st**: Score 1 Run ✅✅ "," **Ball {}st**: PLAYER **RUN OUT** ✅✅ "," **Ball {}st**: WIDE BALL ✅✅ "]).format(message.text.split(' ')[1]))
+   message.reply(random.choice([" **Ball 0.{}🎾**: Score **1** Run ✅✅ ","**Ball 0.{}🎾**: Score **2** Run ✅✅","**Ball 0.{}🎾**: Score **3** Run ✅✅","**Ball 0.{}🎾**: Score **4** Run ✅✅","**Ball 0.{}🎾**: Score **6** Run ✅✅","**Ball 0.{}🎾**: 🚾** Wicket Wicket **🚾"," **Ball 0.{}🎾**: DOT BALL  ✅✅ "," **Ball 0.{}🎾**: PLAYER **CATCH OUT **✅✅ "," **Ball 0.{}🎾**: PLAYER **RUN OUT** ✅✅ ", "  **Ball 0.{}🎾**: 🔛 NO BALL 🔛  ", " **Ball 0.{}🎾**: WIDE BALL ✅✅ "]).format(message.text.split(' ')[1]))
   else:
-   message.reply('Please write batting team name!')
+   message.reply('Please write ball number after command!')
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
   if len(message.text.split(' ')) > 1:
-   message.reply(random.choice(["{} team score 1 run","{} team score 2 run","{} team score 3 run","{} team score 4 run","{} team score 6 run","{} team's 🚾🚾"," **Ball {}st**: 🔛** NO BALL** 🔛"," **Ball {}st**: DOT BALL ✔️✔️ ","{} team's player Run out ","Wide ball"]).format(message.text.split(' ')[1]))
+      message.reply(random.choice([" **Ball 0.{}🎾**: Score **1** Run ✅✅ ","**Ball 0.{}🎾**: Score **2** Run ✅✅","**Ball 0.{}🎾**: Score **3** Run ✅✅","**Ball 0.{}🎾**: Score **4** Run ✅✅","**Ball 0.{}🎾**: Score **6** Run ✅✅","**Ball 0.{}🎾**: 🚾** Wicket Wicket **🚾"," **Ball 0.{}🎾**: DOT BALL  ✅✅ "," **Ball 0.{}🎾**: PLAYER **CATCH OUT **✅✅ "," **Ball 0.{}🎾**: PLAYER **RUN OUT** ✅✅ ", "  **Ball 0.{}🎾**: 🔛 NO BALL 🔛  ", " **Ball 0.{}🎾**: WIDE BALL ✅✅ "]).format(message.text.split(' ')[1]))
   else:
-   message.reply('Please write batting team name!')
+   message.reply('Please write ball number after command!')
    
 @app.on_message(Filters.command('roll'))
 def ran(client, message):
