@@ -37,17 +37,17 @@ def ran(client, message):
 def ran(client, message):
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
   if len(message.text.split(' ')) > 1:
-    message.reply(random.choice(["**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** " ," **Ball 0.{}🎾**: PLAYER **RUN OUT**" ]).format(message.text.split(' ')[1]))
+    message.reply(random.choice(["**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **6** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **6** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **6** Run" ]).format(message.text.split(' ')[1]))
   else:
     message.reply('Please write ball number after command!')
  elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
   if len(message.text.split(' ')) > 1:
-      message.reply(random.choice(["**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** " ," **Ball 0.{}🎾**: PLAYER **RUN OUT**" ]).format(message.text.split(' ')[1]))
+      message.reply(random.choice(["**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **6** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **6** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **6** Run" ]).format(message.text.split(' ')[1]))
   else:
    message.reply('Please write ball number after command!')
  elif message.from_user.id == 491634139:
   if len(message.text.split(' ')) > 1:
-      message.reply(random.choice(["**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** " ," **Ball 0.{}🎾**: PLAYER **RUN OUT**" ]).format(message.text.split(' ')[1]))
+      message.reply(random.choice(["**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **6** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **6** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **6** Run" ]).format(message.text.split(' ')[1]))
   else:
    message.reply('Please write ball number after command!')
  
