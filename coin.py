@@ -7,10 +7,8 @@ app = Client('863961400:AAGtI_itRCKjAZaBftigrKcwAAvMdbuCIEg')
 def ran(client, message) :
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
-   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
-   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
 
 @app.on_message(Filters. private)
 def ran( client, message) :
