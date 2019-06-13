@@ -14,13 +14,6 @@ def ran(client, message) :
 def ran( client, message) :
   message.reply( 'This is teen patti bot with roll, dice, toss and too many features for buy Contact - @google_console ✓✓ ')
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-
-@app.on_message(Filters. command('side'))
-def ran(client, message):
- if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-  message.reply(random.choice(['💫 Result :** Up** 👆 ', '💫 Result : **Down** 👇 ','💫 Result :** Left** 👈','💫 Result : **Right** 👉']))
- if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-  message.reply(random.choice(['💫 Result :** Up** 👆 ', '💫 Result : **Down** 👇 ','💫 Result :** Left** 👈','💫 Result : **Right** 👉']))
   
 @app.on_message(Filters. command('sps'))
 def ran(client, message):
@@ -40,12 +33,12 @@ def ran(client, message):
 def ran(client, message):
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
   if len(message.text.split(' ')) > 1:
-   message.reply(random.choice(["{} team score 1 run","{} team score 2 run","{} team score 3 run","{} team score 4 run","{} team score 6 run","{} team's 🚾🚾","No ball ","Dot ball","{} team's player Run out ","Wide ball"]).format(message.text.split(' ')[1]))
+   message.reply(random.choice(["**Ball {}st**: Score **1** Run ✅✅","**Ball {}st**: Score **2** Run ✅✅","**Ball {}st**: Score **3** Run ✅✅","**Ball {}st**: Score **4** Run ✅✅","**Ball {}st**: Score **6** Run ✅✅","**Ball {}st**: 🚾** Wicket Wicket **🚾","No ball "," **Ball {}st**: Score 1 Run ✅✅ "," **Ball {}st**: PLAYER **RUN OUT** ✅✅ "," **Ball {}st**: WIDE BALL ✅✅ "]).format(message.text.split(' ')[1]))
   else:
    message.reply('Please write batting team name!')
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
   if len(message.text.split(' ')) > 1:
-   message.reply(random.choice(["{} team score 1 run","{} team score 2 run","{} team score 3 run","{} team score 4 run","{} team score 6 run","{} team's 🚾🚾","No ball ","Dot ball","{} team's player Run out ","Wide ball"]).format(message.text.split(' ')[1]))
+   message.reply(random.choice(["{} team score 1 run","{} team score 2 run","{} team score 3 run","{} team score 4 run","{} team score 6 run","{} team's 🚾🚾"," **Ball {}st**: 🔛** NO BALL** 🔛"," **Ball {}st**: DOT BALL ✔️✔️ ","{} team's player Run out ","Wide ball"]).format(message.text.split(' ')[1]))
   else:
    message.reply('Please write batting team name!')
    
