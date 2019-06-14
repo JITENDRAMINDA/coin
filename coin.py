@@ -56,18 +56,19 @@ def ran(client, message):
 @app.on_message(Filters.command('spin'))
 def ran(client, message):
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-   mes = message.reply("**Spinning Wheel....**")
-   time.sleep(10)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + str(random.choice(range(1,36))) + "**")
- elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-   mes = message.reply("**Spinning Wheel....**")
-   time.sleep(10)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + str(random.choice(range(1,36))) + "**")
- elif message.from_user.id == 491634139:
-   mes = message.reply("**Spinning Wheel....**")
-   time.sleep(10)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + str(random.choice(range(1,36))) + "**")
+   mes = message.reply("**Spinning Wheel..**")
+   time.sleep(5)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinning Wheel...."**")
+   time.sleep(5)
+   z = str(random.choice(range(1,36)))
+   mod = z % 2 
+   if mod > 0:
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + z +" " +"🔴" +"**")
+   else:
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + z +" " +"🔴" +"**")
 
+
+ 
    
    
 @app.on_message(Filters.command('roll'))
