@@ -36,7 +36,7 @@ def ran(client, message):
     
 @app.on_message(Filters.command('bowl'))
 def ran(client, message):
- b = get_user(message.from_user.id)
+ b = client.get_user(message.from_user.id)
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + b)
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
   if len(message.text.split(' ')) > 1:
