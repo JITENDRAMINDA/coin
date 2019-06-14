@@ -65,7 +65,7 @@ def ran(client, message):
    if mod > 0:
     client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + z +" " +"🔴" +"**")
    else:
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + z +" " +"🔴" +"**")
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + z +" " +"⚫" +"**")
 
 
  
