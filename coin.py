@@ -1,5 +1,6 @@
 from pyrogram import Client, Filters, Emoji
 import random
+import time
 
 app = Client('863961400:AAGtI_itRCKjAZaBftigrKcwAAvMdbuCIEg')
 
@@ -54,23 +55,18 @@ def ran(client, message):
  @app.on_message(Filters.command('spin'))
 def ran(client, message):
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-
+   mes = message.reply("**Spinning Wheel....**")
+   time.sleep(10)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + random.choice(range(1,36)) + "**")
+ elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
+   mes = message.reply("**Spinning Wheel....**")
+   time.sleep(10)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + random.choice(range(1,36)) + "**")
+ elif message.from_user.id == 491634139:
    mes = message.reply("**Spinning Wheel....**")
    time.sleep(10)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + random.choice(range(1,36)) + "**")
 
-
- elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-  if len(message.text.split(' ')) > 1:
-   message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
-  else:
-   message.reply('Please set a range!')
- elif message.from_user.id == 491634139:
-  if len(message.text.split(' ')) > 1:
-   message.reply(random.choice(range(1, int(message.text.split(' ')[1]))))
-  else:
-   message.reply('Please set a range!')
-  
    
    
 @app.on_message(Filters.command('roll'))
