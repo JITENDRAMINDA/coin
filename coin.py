@@ -61,7 +61,7 @@ def ran(client, message):
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinning Wheel...." +"**")
    time.sleep(4)
    z = str(random.choice(range(1,36)))
-   mod = z % 2 
+   mod = int(z) % 2 
    if mod > 0:
     client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + z +" " +"🔴" +"**")
    else:
