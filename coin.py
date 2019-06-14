@@ -37,7 +37,7 @@ def ran(client, message):
 @app.on_message(Filters.command('bowl'))
 def ran(client, message):
  b = client.get_chat_member(message.chat.id,message.from_user.id)
- client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name + b.user.last_name + b.user.username))
+ client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" " + b.user.last_name+" " + "@" +b.user.username))
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
   if len(message.text.split(' ')) > 1:
     message.reply(random.choice(["**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **6** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **6** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **6** Run" ]).format(message.text.split(' ')[1]))
