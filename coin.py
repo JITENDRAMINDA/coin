@@ -66,13 +66,13 @@ def ran(client, message):
    z = str(random.choice(range(1,36)))
    mod = int(z) % 2 
    if mod > 0:
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + z +" " +"🔴" +"**")
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"🔴" +"**")
    else:
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinner Stopped at " + z +" " +"⚫" +"**")
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫" +"**")
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    mes = message.reply("**Spinning Wheel..**")
    time.sleep(4)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "Spinning Wheel..." +"**")
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel..." +"**")
    time.sleep(4)
    z = str(random.choice(range(-1,37)))
    mod = int(z) % 2 
