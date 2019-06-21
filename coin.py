@@ -75,16 +75,11 @@ def ran(client, message):
    z = str(random.choice(range(-1,37)))
    mod = int(z) % 2 
    if z == 0 :
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"Jackpot Number 🤑🤑" +"**")
-
-  
-   if mod > 0:
-
-     
-
+     client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"Jackpot Number 🤑🤑" +"**")
+   elif mod > 0:
      client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"🔴" +"**")
    else:
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫" +"**")
+     client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫" +"**")
 
   
  
