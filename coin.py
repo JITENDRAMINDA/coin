@@ -58,23 +58,27 @@ def ran(client, message):
 def ran(client, message):
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
    mes = message.reply("**☢️ Spinning Wheel..**")
-   time.sleep(2)
+   time.sleep(1)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel..." +"**")
    time.sleep(2)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel...." +"**")
    time.sleep(3)
-   z = str(random.choice(range(1,36)))
+   z = str(random.choice(range(-1,1)))
    mod = int(z) % 2 
    if mod > 0:
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"🔴" +"**")
+   elif z == 0:
     client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"🔴" +"**")
    else:
     client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫" +"**")
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
    mes = message.reply("**Spinning Wheel..**")
-   time.sleep(4)
+   time.sleep(1)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel..." +"**")
-   time.sleep(4)
-   z = str(random.choice(range(-1,37)))
+   time.sleep(2)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel..." +"**")
+   time.sleep(3)
+   z = str(random.choice(range(-1,1)))
    mod = int(z) % 2 
    if z == 0 :
      client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"Jackpot Number 🤑🤑" +"**")
