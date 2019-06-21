@@ -78,12 +78,6 @@ def ran(client, message):
    client.edit_message_text(message.chat.id,mes.message_id, "**" + ".....☢️ Spinning ☢️....." +"**")
    time.sleep(0.1)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "...☢️ Spinning ☢️..." +"**")
-   time.sleep(0.1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "..☢️ Spinning ☢️.." +"**")
-   time.sleep(0.1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "...☢️ Spinning ☢️..." +"**")
-   time.sleep(0.1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "..☢️ Spinning ☢️.." +"**")
    time.sleep(0.5)
    z = str(random.choice(range(0,36)))
    mod = int(z) % 2 
@@ -94,7 +88,6 @@ def ran(client, message):
    else:
     client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫" +"**")
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-   mes = message.reply("**Spinning Wheel..**")
    mes = message.reply("**..☢️ Spinning ☢️..**")
    time.sleep(0.1)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "...☢️ Spinning ☢️..." +"**")
@@ -114,12 +107,6 @@ def ran(client, message):
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "....☢️ Spinning ☢️...." +"**")
    time.sleep(0.1)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + ".....☢️ Spinning ☢️....." +"**")
-   time.sleep(0.1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "...☢️ Spinning ☢️..." +"**")
-   time.sleep(0.1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "..☢️ Spinning ☢️.." +"**")
-   time.sleep(0.1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "...☢️ Spinning ☢️..." +"**")
    time.sleep(0.1)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "..☢️ Spinning ☢️.." +"**")
    time.sleep(0.5)
