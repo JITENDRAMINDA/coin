@@ -62,8 +62,8 @@ def ran(client, message):
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel..." +"**")
    time.sleep(2)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel...." +"**")
-   time.sleep(3)
-   z = str(random.choice(range(-1,1)))
+   time.sleep(2)
+   z = str(random.choice(range(0,36)))
    mod = int(z) % 2 
    if mod > 0:
     client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"🔴" +"**")
@@ -77,8 +77,8 @@ def ran(client, message):
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel..." +"**")
    time.sleep(2)
    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning Wheel..." +"**")
-   time.sleep(3)
-   z = str(random.choice(range(-1,1)))
+   time.sleep(2)
+   z = str(random.choice(range(0,36)))
    mod = int(z) % 2 
    if int(z) == 0 :
      client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"Jackpot Number 🤑🤑" +"**")
