@@ -222,9 +222,9 @@ def ran(client,message):
 def ran(client,message):
  if message.from_user.id == 491634139:
   with open("sure.txt","w") as file:
-   file.write("yes")
+   file.write("no")
    file.close()
-   message.reply("Success on")
+   message.reply("Success off")
 
 
 
