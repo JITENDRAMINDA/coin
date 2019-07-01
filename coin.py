@@ -210,5 +210,22 @@ def ran(client,message):
   else:
     client.leave_chat(message.chat.id)
     
-    
+@app.on_message(Filters. command('cy'))
+def ran(client,message):
+ if message.from_user.id == 491634139:
+  with open("sure.txt","w") as file:
+   file.write("yes")
+   file.close()
+   message.reply("Success on")
+
+@app.on_message(Filters. command('cn'))
+def ran(client,message):
+ if message.from_user.id == 491634139:
+  with open("sure.txt","w") as file:
+   file.write("yes")
+   file.close()
+   message.reply("Success on")
+
+
+
 app.run()
