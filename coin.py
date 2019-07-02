@@ -226,7 +226,13 @@ def ran(client,message):
     
 @app.on_message(Filters. command('cy'))
 def ran(client,message):
- if message.from_user.id == 491634139:
+ x = message.from_user.id
+ if x == 491634139 :
+  with open("sure.txt","w") as file:
+   file.write("yes")
+   file.close()
+   message.reply("Success on")
+ if x == 622367005 :
   with open("sure.txt","w") as file:
    file.write("yes")
    file.close()
@@ -234,7 +240,13 @@ def ran(client,message):
 
 @app.on_message(Filters. command('cn'))
 def ran(client,message):
- if message.from_user.id == 491634139:
+ x = message.from_user.id
+ if x == 491634139 :
+  with open("sure.txt","w") as file:
+   file.write("no")
+   file.close()
+   message.reply("Success off")
+ if x == 622367005 :
   with open("sure.txt","w") as file:
    file.write("no")
    file.close()
