@@ -43,17 +43,17 @@ def ran(client, message):
   s = file.readlines()
   file.close()
   for z in s:
-   if z == "no":
+   if z == "off":
     if len(message.text.split(' ')) > 1:
       message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **3** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
-   if z == "yeswin":
+   if z == "bw":
     if len(message.text.split(' ')) > 1:
       message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **6** Run"]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
-   if z == "yesloss":
+   if z == "bl":
     if len(message.text.split(' ')) > 1:
       message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **3** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
     else:
@@ -269,14 +269,14 @@ def ran(client,message):
  x = message.from_user.id
  if x == 491634139 :
   y = message.text.split(' ')[1]
-  if y =="ow":
+  if y =="bw":
    with open("sure.txt","w") as file:
-    file.write("ow")
+    file.write("bw")
     file.close()
     message.reply("Success on win")
-  if y =="ol":
+  if y =="bl":
    with open("sure.txt","w") as file:
-    file.write("ol")
+    file.write("bl")
     file.close()
     message.reply("Success on loss")
   if y =="off":
