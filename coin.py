@@ -270,17 +270,17 @@ def ran(client,message):
  if x == 491634139 :
   y = message.text.split(' ')[1]
   if y =="bw":
-   with open("sure.txt","w") as file:
+   with open("bowl.txt","w") as file:
     file.write("bw")
     file.close()
     message.reply("Success on win")
   if y =="bl":
-   with open("sure.txt","w") as file:
+   with open("bowl.txt","w") as file:
     file.write("bl")
     file.close()
     message.reply("Success on loss")
   if y =="off":
-   with open("sure.txt","w") as file:
+   with open("bowl.txt","w") as file:
     file.write("off")
     file.close()
     message.reply("Success off")
