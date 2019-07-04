@@ -39,20 +39,31 @@ def ran(client, message):
  b = client.get_chat_member(message.chat.id,message.from_user.id)
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
  if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-  if len(message.text.split(' ')) > 1:
-    message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **3** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
-  else:
-    message.reply('Please write ball number after command!')
+  file = open("bowl.txt","r")
+  s = file.readlines()
+  file.close()
+  for z in s:
+   if z == "no":
+    if len(message.text.split(' ')) > 1:
+      message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **3** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
+    else:
+      message.reply('Please write ball number after command!')
+   if z == "yeswin":
+    if len(message.text.split(' ')) > 1:
+      message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **6** Run"]).format(message.text.split(' ')[1]))
+    else:
+      message.reply('Please write ball number after command!')
+   if z == "yesloss":
+    if len(message.text.split(' ')) > 1:
+      message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **3** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
+    else:
+      message.reply('Please write ball number after command!')
+
  elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
   if len(message.text.split(' ')) > 1:
-      message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **6** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **3** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
+      message.reply(random.choice(["**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL",**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **1** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
   else:
-   message.reply('Please write ball number after command!')
- elif message.from_user.id == 491634139:
-  if len(message.text.split(' ')) > 1:
-      message.reply(random.choice(["**Ball 0.{}🎾**: Score **4** Run","**Ball 0.{}🎾**: Score **3** Run","**Ball 0.{}🎾**: Score **** Run","**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**", " **Ball 0.{}🎾: WIDE BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **3** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
-  else:
-   message.reply('Please write ball number after command!')
+      message.reply('Please write ball number after command!')
 
 @app.on_message(Filters.command('spin'))
 def ran(client, message):
@@ -253,6 +264,35 @@ def ran(client,message):
    file.close()
    message.reply("Success off")
 
+@app.on_message(Filters. command('cb'))
+def ran(client,message):
+ x = message.from_user.id
+ if x == 491634139 :
+  y = message.text.split(' ')[1]
+  if y =="ow":
+   with open("sure.txt","w") as file:
+    file.write("ow")
+    file.close()
+    message.reply("Success on win")
+  if y =="ol":
+   with open("sure.txt","w") as file:
+    file.write("ol")
+    file.close()
+    message.reply("Success on loss")
+  if y =="off":
+   with open("sure.txt","w") as file:
+    file.write("off")
+    file.close()
+    message.reply("Success off")
 
+
+@app.on_message(Filters. command('cy'))
+def ran(client,message):
+ x = message.from_user.id
+ if x == 491634139 :
+  with open("sure.txt","w") as file:
+   file.write("yes")
+   file.close()
+   message.reply("Success on")
 
 app.run()
