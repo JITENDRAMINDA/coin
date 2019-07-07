@@ -43,6 +43,7 @@ def ran(client, message):
   s = file.readlines()
   file.close()
   for z in s:
+   print(z)
    if z == "off":
     if len(message.text.split(' ')) > 1:
       x = random.choice(["6","4","3","2","1","4","3","2","4","6"])
@@ -58,14 +59,17 @@ def ran(client, message):
       message.reply('Please write ball number after command!')
    if z == "bl":
     if len(message.text.split(' ')) > 1:
-      message.reply(random.choice(["**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **1** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
+      message.reply(random.choice(["**Ball 0.{}🎾**: Score **2** Run","**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL", "**Ball 0.{}🎾: NO BALL**","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **1** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **3** Run" ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
 
  elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-  if len(message.text.split(' ')) > 1:
-      message.reply(random.choice(["**Ball 0.{}🎾**: Score **1** Run","**Ball 0.{}🎾**: DOT BALL","**Ball 0.{}🎾**: 🚾** Wicket **🚾","**Ball 0.{}🎾**: Score **2** Run" ," **Ball 0.{}🎾**: PLAYER **CATCH OUT** ","**Ball 0.{}🎾**: Score **1** Run" ," **Ball 0.{}🎾**: PLAYER **RUN OUT**","**Ball 0.{}🎾**: Score **1** Run" ]).format(message.text.split(' ')[1]))
-  else:
+    if len(message.text.split(' ')) > 1:
+      x = random.choice(["6","4","3","2","1","4","3","2","4","6"])
+      y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
+      z = random.choice(["dot ball","wide ball","no ball"])
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
+    else:
       message.reply('Please write ball number after command!')
 
 @app.on_message(Filters.command('spin'))
@@ -286,7 +290,7 @@ def ran(client,message):
    with open("bowl.txt","w") as file:
     file.write("off")
     file.close()
-    message.reply("Success off")
+    message.reply("Success off bowl")
 
 
 @app.on_message(Filters. command('cy'))
