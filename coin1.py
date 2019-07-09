@@ -12,7 +12,7 @@ def ran(client, message) :
 
 @app.on_message(Filters. private)
 def ran( client, message) :
-  message.reply( """♻️ This is Gamebot created by a wonderful (person)[https://t.me/Google_console] ✍️.
+  message.reply( """♻️ This is Gamebot created by a wonderful [person](https://t.me/Google_console) ✍️.
 My commands :
 👉 flip a coin 
 1. /toss
@@ -40,7 +40,7 @@ My commands :
 
 All command exist only Admins in Super groups ✍️.
 
-For buy (click here)[https://t.me/google_console]
+For buy [click here](https://t.me/google_console)
 
  """)
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
