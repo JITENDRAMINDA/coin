@@ -42,7 +42,7 @@ All command exist only Admins in Super groups ✍️.
 
 For buy [click here](https://t.me/google_console)
 
- """)
+ """,disable_web_page_preview = True )
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
   
 @app.on_message(Filters. command('sps'))
