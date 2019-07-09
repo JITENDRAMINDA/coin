@@ -12,7 +12,37 @@ def ran(client, message) :
 
 @app.on_message(Filters. private)
 def ran( client, message) :
-  message.reply( 'This is teen patti bot with roll, dice, toss and too many features for buy Contact - @google_console ✓✓ ')
+  message.reply( """♻️ This is Gamebot created by a wonderful (person)[https://t.me/Google_console] ✍️.
+My commands :
+👉 flip a coin 
+1. /toss
+
+👉 for bowling
+2. /bowl {bowl no.}
+
+👉 For show user cards
+3. /show {username}
+
+👉 for roullate
+4. /spin
+
+👉 for sps
+5. /sps
+
+👉 for even odd
+6. /dice or /roll {range}
+
+👉 for double roll
+7. /droll {range} or /dice2
+
+👉 for decision
+8. /decide
+
+All command exist only Admins in Super groups ✍️.
+
+For buy (click here)[https://t.me/google_console]
+
+ """)
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
   
 @app.on_message(Filters. command('sps'))
