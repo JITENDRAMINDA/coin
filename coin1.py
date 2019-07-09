@@ -6,9 +6,8 @@ app = Client("session",bot_token="671246828:AAEBHXtc-ilbHm60HzSKW5szVrPnWIKJAbY"
 
 @app.on_message(Filters. command('toss'))
 def ran(client, message) :
- if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-   message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
- elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
+ b = client.get_chat_member(message.chat.id , message.from_user.id).status
+ if b == 'administrator' or b == "creator":
    message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
 
 @app.on_message(Filters. private)
@@ -18,17 +17,15 @@ def ran( client, message) :
   
 @app.on_message(Filters. command('sps'))
 def ran(client, message):
- if client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-    message.reply(random.choice(['💫 Result :** Paper** ', '💫 Result : **Stone** ','💫 Result : **Sessiors**']))
- elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-    message.reply(random.choice(['💫 Result :** Paper** ', '💫 Result : **Stone** ','💫 Result : **Sessiors**']))
+ b = client.get_chat_member(message.chat.id , message.from_user.id).status
+ if b == 'administrator' or b == "creator":
+   message.reply(random.choice(['💫 Result :** Paper** ', '💫 Result : **Stone** ','💫 Result : **Sessiors**']))
 
 @app.on_message(Filters. command('decide'))
 def ran(client, message):
-   if client.get_chat_member(message.chat.id , message.from_user.id).status == 'administrator':
-    message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
-   elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
-    message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
+ b = client.get_chat_member(message.chat.id , message.from_user.id).status
+ if b == 'administrator' or b == "creator":
+   message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
     
 @app.on_message(Filters.command('bowl'))
 def ran(client, message):
@@ -45,6 +42,18 @@ def ran(client, message):
 
 @app.on_message(Filters.command('spin'))
 def ran(client, message):
+ b = client.get_chat_member(message.chat.id , message.from_user.id).status
+ if b == 'administrator' or b == "creator":
+   mes = message.reply("**☢️ Spinning..ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**")
+   time.sleep(1)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning...ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ" +"**")
+   time.sleep(1)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning....ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
+   time.sleep(1)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning...ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
+   time.sleep(1)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning..ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
+   time.sleep(1)
    z = str(random.choice(range(0,36)))
    mod = int(z) % 2 
    if mod > 0:
@@ -52,11 +61,7 @@ def ran(client, message):
    elif int(z) == 0:
     client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"Jackpot Number 🤑🤑ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
    else:
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
-
-  
- 
-   
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")  
    
 @app.on_message(Filters.command('roll'))
 def ran(client, message):
