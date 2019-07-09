@@ -10,7 +10,7 @@ def ran(client, message) :
  if b == 'administrator' or b == "creator":
    message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
 
-@app.on_message(Filters. private)
+@app.on_message(Filters. private & Filters.command("start"))
 def ran( client, message) :
   message.reply( """♻️ This is Gamebot created by a wonderful [person](https://t.me/Google_console) ✍️.
 My commands :
