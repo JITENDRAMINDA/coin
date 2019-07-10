@@ -34,7 +34,7 @@ def ran(client, message):
    elif client.get_chat_member(message.chat.id , message.from_user.id).status == 'creator':
     message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
     
-@app.on_message(Filters.command('bowl'))
+@app.on_message(Filters.command('bowl' or 'ball' or 'b'))
 def ran(client, message):
  b = client.get_chat_member(message.chat.id,message.from_user.id)
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
