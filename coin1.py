@@ -67,7 +67,7 @@ def ran(client, message):
  if b.status == 'administrator' or b.status =="creator":
   x = random.choice(["1","2","3","4","5","6","7","8","9","10","5","6","4","10","3","2","1","10","5","7","8"])
  
-  Client.send_animation(chat_id=message.chat.id, animation="AAQFABM0ivkyAARqjJAu0WNWCDgoAAIC")
+  client.send_animation(chat_id=message.chat.id, animation="AAQFABM0ivkyAARqjJAu0WNWCDgoAAIC")
 
 @app.on_message(Filters.command('bowl'))
 def ran(client, message):
