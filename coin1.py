@@ -66,8 +66,8 @@ def ran(client, message):
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
  if b.status == 'administrator' or b.status =="creator":
   x = random.choice(["1","2","3","4","5","6","7","8","9","10","5","6","4","10","3","2","1","10","5","7","8"])
- 
-  client.send_animation(message.chat.id, "CgADBQADmgADhPAYV-eqySfP0LJTAg")
+  client.send_message(message.chat.id,message.reply_to_message.animation.file_id)
+  #client.send_animation(message.chat.id, "CgADBQADmgADhPAYV-eqySfP0LJTAg")
 
 @app.on_message(Filters.command('bowl'))
 def ran(client, message):
