@@ -66,8 +66,26 @@ def ran(client, message):
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
  if b.status == 'administrator' or b.status =="creator":
   x = random.choice(["1","2","3","4","5","6","7","8","9","10","5","6","4","10","3","2","1","10","5","7","8"])
-  #client.send_message(message.chat.id,message.reply_to_message.animation.file_id)
-  client.send_animation(message.chat.id, "CgADBQADhQADwMtgVaLqemJ5PxrUAg")
+  if x == "1":
+   client.send_animation(message.chat.id, "CgADBQADhQADwMtgVaLqemJ5PxrUAg" )
+  if x == "2":
+   client.send_animation(message.chat.id, "CgADBQADhwADwMtgVQaNytQs6QzkAg" )
+  if x == "3":
+   client.send_animation(message.chat.id, "CgADBQADiQADwMtgVem_hevgaJBKAg" )
+  if x == "4":
+   client.send_animation(message.chat.id, "CgADBQADiwADwMtgVdiYv8C-xcAYAg" )
+  if x == "5":
+   client.send_animation(message.chat.id, "CgADBQADjQADwMtgVboSDeRCXzkmAg" )
+  if x == "6":
+   client.send_animation(message.chat.id, "CgADBQADjgADwMtgVbOcRpXM-lJXAg" )
+  if x == "7":
+   client.send_animation(message.chat.id, "CgADBQADkwADwMtgVUfS6FOic5P2Ag" )
+  if x == "8":
+   client.send_animation(message.chat.id, "CgADBQADlgADwMtgVY0FXdi4xSaEAg" )
+  if x == "9":
+   client.send_animation(message.chat.id, "CgADBQADmgADwMtgVQ7JpGpzBaOOAg" )
+  if x == "10":
+   client.send_animation(message.chat.id, "CgADBQADmQADwMtgVQNxdL6L1sYGAg" )
 
 @app.on_message(Filters.command('bowl'))
 def ran(client, message):
