@@ -23,7 +23,7 @@ My commands :
 👉 For show user cards
 3. /show {username}
 
-👉 for roullate
+👉 for spin numbers
 4. /spin
 
 👉 for sps
@@ -37,6 +37,9 @@ My commands :
 
 👉 for decision
 8. /decide
+
+👉 for roulette
+9. /rt
 
 All command exist only Admins in Super groups ✍️.
 
@@ -57,33 +60,42 @@ def ran(client, message):
  if b == 'administrator' or b == "creator":
    message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
     
-@app.on_message(Filters.command('bowl') or Filters.command("ball"))
-def ran(client, message):
- b = client.get_chat_member(message.chat.id,message.from_user.id)
- client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
- if b.status == 'administrator' or b.status =="creator":
-    if len(message.text.split(' ')) > 1:
-      x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
-      y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
-      z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z]).format(message.text.split(' ')[1]))
-    else:
-      message.reply('Please write ball number after command!')
-@app.on_message(Filters.command('ball') or Filters.command("ball"))
-def ran(client, message):
- b = client.get_chat_member(message.chat.id,message.from_user.id)
- client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
- if b.status == 'administrator' or b.status =="creator":
-    if len(message.text.split(' ')) > 1:
-      x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
-      y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
-      z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z]).format(message.text.split(' ')[1]))
-    else:
-      message.reply('Please write ball number after command!')
-
-
 @app.on_message(Filters.command('spin'))
+def ran(client, message):
+ b = client.get_chat_member(message.chat.id,message.from_user.id)
+ client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
+ if b.status == 'administrator' or b.status =="creator":
+  x = random.choice(["1","2","3","4","5","6","7","8","9","10","5","6","4","10","3","2","1","10","5","7","8"])
+  if x == 1:
+   Client.send_animation(message.chat.id,"AAQFABM0ivkyAARqjJAu0WNWCDgoAAIC")
+
+@app.on_message(Filters.command('bowl'))
+def ran(client, message):
+ b = client.get_chat_member(message.chat.id,message.from_user.id)
+ client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
+ if b.status == 'administrator' or b.status =="creator":
+    if len(message.text.split(' ')) > 1:
+      x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
+      y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
+      z = random.choice(["dot ball","wide ball","no ball"])
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z]).format(message.text.split(' ')[1]))
+    else:
+      message.reply('Please write ball number after command!')
+@app.on_message(Filters.command('ball'))
+def ran(client, message):
+ b = client.get_chat_member(message.chat.id,message.from_user.id)
+ client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
+ if b.status == 'administrator' or b.status =="creator":
+    if len(message.text.split(' ')) > 1:
+      x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
+      y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
+      z = random.choice(["dot ball","wide ball","no ball"])
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z]).format(message.text.split(' ')[1]))
+    else:
+      message.reply('Please write ball number after command!')
+
+
+@app.on_message(Filters.command('rt'))
 def ran(client, message):
  b = client.get_chat_member(message.chat.id , message.from_user.id).status
  if b == 'administrator' or b == "creator":
