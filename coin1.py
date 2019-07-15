@@ -10,43 +10,6 @@ def ran(client, message) :
  if b == 'administrator' or b == "creator":
    message.reply(random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Tail**', '💫 Result :**Head** ',  '💫 Result : **Tail**', '💫 Result :**Head** ','💫 Result : **Tail**', '💫 Result :**Head** ']))
 
-@app.on_message(Filters. private & Filters.command("start"))
-def ran( client, message) :
-  message.reply( """♻️ This is Gamebot created by a wonderful [person](https://t.me/Google_console) ✍️.
-My commands :
-👉 flip a coin 
-1. /toss
-
-👉 for bowling
-2. /bowl {bowl no.}
-
-👉 For show user cards
-3. /show {username}
-
-👉 for spin numbers
-4. /spin
-
-👉 for sps
-5. /sps
-
-👉 for even odd
-6. /dice or /roll {range}
-
-👉 for double roll
-7. /droll {range} or /dice2
-
-👉 for decision
-8. /decide
-
-👉 for roulette
-9. /rt
-
-All command exist only Admins in Super groups ✍️.
-
-For buy [click here](https://t.me/google_console)
-
- """,disable_web_page_preview = True )
-  client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
   
 @app.on_message(Filters. command('sps'))
 def ran(client, message):
@@ -60,32 +23,6 @@ def ran(client, message):
  if b == 'administrator' or b == "creator":
    message.reply(random.choice(['💫 Result :** Yes** ', '💫 Result : **Maybe** ','💫 Result :** No** ']))
     
-@app.on_message(Filters.command('spin'))
-def ran(client, message):
- b = client.get_chat_member(message.chat.id,message.from_user.id)
- client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
- if b.status == 'administrator' or b.status =="creator":
-  x = random.choice(["1","2","3","4","5","6","7","8","9","10","5","6","4","10","3","2","1","10","5","7","8"])
-  if x == "1":
-   client.send_animation(message.chat.id, "CgADBQADhQADwMtgVaLqemJ5PxrUAg" )
-  if x == "2":
-   client.send_animation(message.chat.id, "CgADBQADhwADwMtgVQaNytQs6QzkAg" )
-  if x == "3":
-   client.send_animation(message.chat.id, "CgADBQADiQADwMtgVem_hevgaJBKAg" )
-  if x == "4":
-   client.send_animation(message.chat.id, "CgADBQADiwADwMtgVdiYv8C-xcAYAg" )
-  if x == "5":
-   client.send_animation(message.chat.id, "CgADBQADjQADwMtgVboSDeRCXzkmAg" )
-  if x == "6":
-   client.send_animation(message.chat.id, "CgADBQADjgADwMtgVbOcRpXM-lJXAg" )
-  if x == "7":
-   client.send_animation(message.chat.id, "CgADBQADkwADwMtgVUfS6FOic5P2Ag" )
-  if x == "8":
-   client.send_animation(message.chat.id, "CgADBQADlgADwMtgVY0FXdi4xSaEAg" )
-  if x == "9":
-   client.send_animation(message.chat.id, "CgADBQADmgADwMtgVQ7JpGpzBaOOAg" )
-  if x == "10":
-   client.send_animation(message.chat.id, "CgADBQADmQADwMtgVQNxdL6L1sYGAg" )
 
 @app.on_message(Filters.command('bowl'))
 def ran(client, message):
@@ -112,29 +49,6 @@ def ran(client, message):
     else:
       message.reply('Please write ball number after command!')
 
-
-@app.on_message(Filters.command('rt'))
-def ran(client, message):
- b = client.get_chat_member(message.chat.id , message.from_user.id).status
- if b == 'administrator' or b == "creator":
-   mes = message.reply("**☢️ Spinning..ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**")
-   time.sleep(1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning...ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ" +"**")
-   time.sleep(1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning....ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
-   time.sleep(1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning...ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
-   time.sleep(1)
-   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning..ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
-   time.sleep(1)
-   z = str(random.choice(range(0,36)))
-   mod = int(z) % 2 
-   if mod > 0:
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"🔴ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
-   elif int(z) == 0:
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"Jackpot Number 🤑🤑ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
-   else:
-    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")  
    
 @app.on_message(Filters.command('roll'))
 def ran(client, message):
@@ -195,6 +109,96 @@ def ran(client,message):
     client.leave_chat(int(message.text.split(' ')[1]))
   else:
     client.leave_chat(message.chat.id)
+
+@app.on_message(Filters.command('spin'))
+def ran(client, message):
+ b = client.get_chat_member(message.chat.id,message.from_user.id)
+ client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
+ if b.status == 'administrator' or b.status =="creator":
+  x = random.choice(["1","2","3","4","5","6","7","8","9","10","5","6","4","10","3","2","1","10","5","7","8"])
+  if x == "1":
+   client.send_animation(message.chat.id, "CgADBQADhQADwMtgVaLqemJ5PxrUAg" )
+  if x == "2":
+   client.send_animation(message.chat.id, "CgADBQADhwADwMtgVQaNytQs6QzkAg" )
+  if x == "3":
+   client.send_animation(message.chat.id, "CgADBQADiQADwMtgVem_hevgaJBKAg" )
+  if x == "4":
+   client.send_animation(message.chat.id, "CgADBQADiwADwMtgVdiYv8C-xcAYAg" )
+  if x == "5":
+   client.send_animation(message.chat.id, "CgADBQADjQADwMtgVboSDeRCXzkmAg" )
+  if x == "6":
+   client.send_animation(message.chat.id, "CgADBQADjgADwMtgVbOcRpXM-lJXAg" )
+  if x == "7":
+   client.send_animation(message.chat.id, "CgADBQADkwADwMtgVUfS6FOic5P2Ag" )
+  if x == "8":
+   client.send_animation(message.chat.id, "CgADBQADlgADwMtgVY0FXdi4xSaEAg" )
+  if x == "9":
+   client.send_animation(message.chat.id, "CgADBQADmgADwMtgVQ7JpGpzBaOOAg" )
+  if x == "10":
+   client.send_animation(message.chat.id, "CgADBQADmQADwMtgVQNxdL6L1sYGAg" )
+
+
+@app.on_message(Filters.command('rolls'))
+def ran(client, message):
+ b = client.get_chat_member(message.chat.id , message.from_user.id).status
+ if b == 'administrator' or b == "creator":
+   mes = message.reply("**☢️ Spinning..ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ**")
+   time.sleep(1)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning...ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ" +"**")
+   time.sleep(1)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning....ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
+   time.sleep(1)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning...ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
+   time.sleep(1)
+   client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinning..ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
+   time.sleep(1)
+   z = str(random.choice(range(0,36)))
+   mod = int(z) % 2 
+   if mod > 0:
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"🔴ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
+   elif int(z) == 0:
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"Jackpot Number 🤑🤑ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")
+   else:
+    client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")  
+
+
+@app.on_message(Filters. private & Filters.command("start"))
+def ran( client, message) :
+  message.reply( """♻️ This is Gamebot created by a wonderful [person](https://t.me/Google_console) ✍️.
+My commands :
+👉 flip a coin 
+1. /toss
+
+👉 for bowling
+2. /bowl {bowl no.}
+
+👉 For show user cards
+3. /show {username}
+
+👉 for spin numbers
+4. /spin
+
+👉 for sps
+5. /sps
+
+👉 for even odd
+6. /dice or /roll {range}
+
+👉 for double roll
+7. /droll {range} or /dice2
+
+👉 for decision
+8. /decide
+
+👉 for roulette
+9. /rolls
+
+All command exist only Admins in Super groups ✍️.
+
+For buy [click here](https://t.me/google_console)
+
+ """,disable_web_page_preview = True )
+  client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
     
 
 app.run()
