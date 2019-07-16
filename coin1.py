@@ -161,7 +161,7 @@ def ran(client, message):
    else:
     client.edit_message_text(message.chat.id,mes.message_id, "**" + "☢️ Spinner Stopped at " + z +" " +"⚫ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ" +"**")  
 
-@app.on_message(Filters.command('rolls'))
+@app.on_message(Filters.command('ani'))
 def ran(client, message):
   client.send_message(message.chat.id,message.reply_to_message.animation.file_id)
 
