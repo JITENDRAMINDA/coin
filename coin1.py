@@ -2,7 +2,7 @@ from pyrogram import Client, Filters, Emoji
 import random
 import time
 
-app = Client("session",bot_token="860849547:AAE37G1Hjb1pIuNb1a7eNu-FWeEo4D4DE2w",api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
+app = Client("session",bot_token="666639160:AAGtZH6nBjdAK07QH9Irevw1SOxzLgWH5Uw",api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
 
 @app.on_message(Filters. command('toss'))
 def ran(client, message) :
