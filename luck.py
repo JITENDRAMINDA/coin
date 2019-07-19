@@ -30,10 +30,10 @@ def ran(client, message):
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
  if b.status == 'administrator' or b.status =="creator":
     if len(message.text.split(' ')) > 1:
-      x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
+      x = random.choice(["3","2","3","4","2","1","2","4","1","6","3","4","2","3","6","4","3"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: Score **" + x + "** Runs" , "**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
 @app.on_message(Filters.command('ball'))
@@ -45,7 +45,7 @@ def ran(client, message):
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: Score **" + x + "** Runs"  ,"**Ball 0.{}🎾**:" + y, "**Ball 0.{}🎾**: Score **" + x + "** Runs" , "**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
 
