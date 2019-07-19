@@ -2,7 +2,7 @@ from pyrogram import Client, Filters, Emoji
 import random
 import time
 
-app = Client("session",bot_token="666639160:AAGtZH6nBjdAK07QH9Irevw1SOxzLgWH5Uw",api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
+app = Client("session",bot_token="953819366:AAGOfnz28ejapUS3cBBEZLXQ8kTC5DV7fOw",api_id=605563,api_hash="7f2c2d12880400b88764b9b304e14e0b") 
 
 @app.on_message(Filters. command('toss'))
 def ran(client, message) :
@@ -33,7 +33,7 @@ def ran(client, message):
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z]).format(message.text.split(' ')[1]))
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" , random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" , "**Ball 0.{}🎾**: " + z,random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
 @app.on_message(Filters.command('ball'))
@@ -45,7 +45,7 @@ def ran(client, message):
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z]).format(message.text.split(' ')[1]))
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs"  ,"**Ball 0.{}🎾**:" + y, random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" , "**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z, random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
 
