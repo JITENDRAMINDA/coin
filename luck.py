@@ -33,7 +33,7 @@ def ran(client, message):
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" , random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" , "**Ball 0.{}🎾**: " + z,random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**:" + y,"**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: Score **" + x + "** Runs" , "**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
 @app.on_message(Filters.command('ball'))
@@ -45,7 +45,7 @@ def ran(client, message):
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs"  ,"**Ball 0.{}🎾**:" + y, random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" , "**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z, random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
+      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: Score **" + x + "** Runs"  ,"**Ball 0.{}🎾**:" + y, "**Ball 0.{}🎾**: Score **" + x + "** Runs" , "**Ball 0.{}🎾**: Score **" + x + "** Runs", "**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**: Score **" + x + "** Runs" ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
 
