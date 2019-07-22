@@ -38,13 +38,13 @@ def ran(client, message):
       file = open("bowl.txt","r")
       s = file.readlines()
       file.close()
-      for z in s:
-       if z == "bw":
-        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + w + "** Runs", "**Ball 0.{}🎾**: Score **" + w + "** Runs" ,"**Ball 0.{}🎾**: Score **" + w + "** Runs" , ]).format(message.text.split(' ')[1]))
-       elif z == "bl":
-        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + l + "** Runs", "**Ball 0.{}🎾**: Score **" + l + "** Runs" ,"**Ball 0.{}🎾**: Score **" + l + "** Runs" , ]).format(message.text.split(' ')[1]))
+      for i in s:
+       if i == "bw":
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + w + "** Runs", "**Ball 0.{}🎾**: Score **" + w + "** Runs" ,"**Ball 0.{}🎾**: Score **" + w + "** Runs"]).format(message.text.split(' ')[1]))
+       elif i == "bl":
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + l + "** Runs", "**Ball 0.{}🎾**: Score **" + l + "** Runs" ,"**Ball 0.{}🎾**: Score **" + l + "** Runs"]).format(message.text.split(' ')[1]))
        else:
-        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format(message.text.split(' ')[1]))
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs"]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
     with open("bowl.txt","w") as file:
@@ -65,10 +65,10 @@ def ran(client, message):
       file = open("bowl.txt","r")
       s = file.readlines()
       file.close()
-      for z in s:
-       if z == "bw":
+      for i in s:
+       if i == "bw":
         message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + w + "** Runs", "**Ball 0.{}🎾**: Score **" + w + "** Runs" ,"**Ball 0.{}🎾**: Score **" + w + "** Runs" , ]).format(message.text.split(' ')[1]))
-       elif z == "bl":
+       elif i == "bl":
         message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + l + "** Runs", "**Ball 0.{}🎾**: Score **" + l + "** Runs" ,"**Ball 0.{}🎾**: Score **" + l + "** Runs" , ]).format(message.text.split(' ')[1]))
        else:
         message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format(message.text.split(' ')[1]))
