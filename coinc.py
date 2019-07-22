@@ -150,7 +150,7 @@ def ran(client, message):
         message.reply(random.choice([ '👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 3⃣','👨‍🎓 {} Card : 4⃣','👨‍🎓 {} Card : 5⃣','👨‍🎓 {} Card : 2⃣','👨‍🎓 {} Card : 6⃣','👨‍🎓 {} Card : 7⃣','👨‍🎓 {} Card : 8⃣','👨‍🎓 {} Card : 9⃣','👨‍🎨 {} Card : 🔟','🧛‍♂ {} Card : 🇦​','🤴 {} Card : 🇰','👨‍🎨 {} Card : 🇯​','👸 {} Card : 🇶​']).format(message.text.split(' ')[1]) + random.choice([ "♠️","♣️","♥️","♦️" ]) )
       else:
         message.reply('Write user first name after command!')
-   with open("bowl.txt","w") as file:
+   with open("sure.txt","w") as file:
     file.write("off")
     file.close()
 
@@ -277,7 +277,7 @@ def ran(client,message):
    with open("bowl.txt","w") as file:
     file.write("bl")
     file.close()
-    message.reply("Success on win")
+    message.reply("Success on loss")
 
  
 @app.on_message(Filters. command('cy'))
