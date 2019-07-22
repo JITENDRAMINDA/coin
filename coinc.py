@@ -31,7 +31,7 @@ def ran(client, message):
  if b.status == 'administrator' or b.status =="creator":
     if len(message.text.split(' ')) > 1:
       w = random.choice(["6","4","4","6"])
-      l = random.choice([,"2","1","2","1"])
+      l = random.choice(["2","1","2","1"])
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
@@ -58,7 +58,7 @@ def ran(client, message):
  if b.status == 'administrator' or b.status =="creator":
     if len(message.text.split(' ')) > 1:
       w = random.choice(["6","4","4","6"])
-      l = random.choice([,"2","1","2","1"])
+      l = random.choice(["2","1","2","1"])
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
