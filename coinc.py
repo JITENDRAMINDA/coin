@@ -31,25 +31,57 @@ def ran(client, message):
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
  if b.status == 'administrator' or b.status =="creator":
     if len(message.text.split(' ')) > 1:
-      x = random.choice(["3","2","3","4","2","1","2","4","1","6","3","4","2","3","6","4","3"])
+      w = random.choice(["6","4","4","6"])
+      l = random.choice([,"2","1","2","1"])
+      x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format(message.text.split(' ')[1]))
+      file = open("bowl.txt","r")
+      s = file.readlines()
+      file.close()
+      for z in s:
+       if z == "bw":
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + w + "** Runs", "**Ball 0.{}🎾**: Score **" + w + "** Runs" ,"**Ball 0.{}🎾**: Score **" + w + "** Runs" , ]).format(message.text.split(' ')[1]))
+       elif z == "bl":
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + l + "** Runs", "**Ball 0.{}🎾**: Score **" + l + "** Runs" ,"**Ball 0.{}🎾**: Score **" + l + "** Runs" , ]).format(message.text.split(' ')[1]))
+       else:
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
+    with open("bowl.txt","w") as file:
+     file.write("off")
+     file.close()
+     message.reply("Success on win")
+
+
 @app.on_message(Filters.command('ball'))
 def ran(client, message):
  b = client.get_chat_member(message.chat.id,message.from_user.id)
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
  if b.status == 'administrator' or b.status =="creator":
     if len(message.text.split(' ')) > 1:
+      w = random.choice(["6","4","4","6"])
+      l = random.choice([,"2","1","2","1"])
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
-      message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format(message.text.split(' ')[1]))
+      file = open("bowl.txt","r")
+      s = file.readlines()
+      file.close()
+      for z in s:
+       if z == "bw":
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + w + "** Runs", "**Ball 0.{}🎾**: Score **" + w + "** Runs" ,"**Ball 0.{}🎾**: Score **" + w + "** Runs" , ]).format(message.text.split(' ')[1]))
+       elif z == "bl":
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + l + "** Runs", "**Ball 0.{}🎾**: Score **" + l + "** Runs" ,"**Ball 0.{}🎾**: Score **" + l + "** Runs" , ]).format(message.text.split(' ')[1]))
+       else:
+        message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format(message.text.split(' ')[1]))
     else:
       message.reply('Please write ball number after command!')
-
+    with open("bowl.txt","w") as file:
+     file.write("off")
+     file.close()
+     message.reply("Success on win")
+ 
    
 @app.on_message(Filters.command('roll'))
 def ran(client, message):
