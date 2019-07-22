@@ -226,9 +226,10 @@ def ran(client, message):
 def ran(client, message):
   client.send_message(message.chat.id,message.reply_to_message.animation.file_id)
 
+
 @app.on_message(Filters. private & Filters.command("start"))
 def ran( client, message) :
-  message.reply( """♻️ This is Gamebot created by a wonderful person ✍️.
+  message.reply( """♻️ This is Gamebot created by a wonderful [person](https://t.me/Google_console) ✍️.
 My commands :
 👉 flip a coin 
 1. /toss
@@ -249,9 +250,11 @@ My commands :
 👉 for roulette
 9. /rolls
 All command exist only Admins in Super groups ✍️.
+For buy [click here](https://t.me/google_console)
  """,disable_web_page_preview = True )
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-  
+    
+
 @app.on_message(Filters. command('cn'))
 def ran(client,message):
  x = message.from_user.id
