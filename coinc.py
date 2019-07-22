@@ -151,7 +151,7 @@ def ran(client, message):
       else:
         message.reply('Write user first name after command!')
    with open("bowl.txt","w") as file:
-    file.write("bl")
+    file.write("off")
     file.close()
 
 
