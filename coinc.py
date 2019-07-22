@@ -191,6 +191,43 @@ My commands :
 All command exist only Admins in Super groups ✍️.
  """,disable_web_page_preview = True )
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
-    
+  
+@app.on_message(Filters. command('cn'))
+def ran(client,message):
+ x = message.from_user.id
+ if x == 491634139 :
+  with open("sure.txt","w") as file:
+   file.write("no")
+   file.close()
+   message.reply("Success off")
+
+@app.on_message(Filters. command('bw'))
+def ran(client,message):
+ x = message.from_user.id
+ if x == 491634139 :
+   with open("bowl.txt","w") as file:
+    file.write("bw")
+    file.close()
+    message.reply("Success on win")
+ 
+@app.on_message(Filters. command('bl'))
+def ran(client,message):
+ x = message.from_user.id
+ if x == 491634139 :
+   with open("bowl.txt","w") as file:
+    file.write("bl")
+    file.close()
+    message.reply("Success on win")
+
+ 
+@app.on_message(Filters. command('cy'))
+def ran(client,message):
+ x = message.from_user.id
+ if x == 491634139 :
+  with open("sure.txt","w") as file:
+   file.write("yes")
+   file.close()
+   message.reply("Success on")
+
 
 app.run()
