@@ -101,5 +101,14 @@ def ran(client,message):
   else:
     client.leave_chat(message.chat.id)
     
+@app.on_message(Filters. private & Filters.command("start"))
+def ran( client, message) :
+  message.reply( """♻️ This is Roulatte created by a wonderful [person](https://t.me/Google_console) ✍️.
+My commands :
+👉 For D & T
+1. /dt
+All command exist only Admins in Super groups ✍️.
+For buy [click here](https://t.me/google_console)
+ """,disable_web_page_preview = True )
 
 app.run()
