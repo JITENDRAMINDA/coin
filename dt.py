@@ -48,7 +48,7 @@ def ran(client, message):
    time.sleep(1)
    x = str(random.choice(["3⃣","9⃣","7⃣","5⃣","6⃣","4⃣","8⃣","2⃣","🔟","🇯","🇰","🇦","🇶"])) + str(random.choice(["♣️","♥️","♠️","♦️"]))
    y = str(random.choice(["6⃣","3⃣","9⃣","🔟","2⃣","7⃣","8⃣","4⃣","5⃣","🇯","🇰","🇦","🇶"])) + str(random.choice(["♥️","♠️","♦️","♣️"]))
-   client.edit_message_text(message.chat.id,mes.message_id," **🐉 " + x +"""
+   client.edit_message_text(message.chat.id,mes.message_id,"🐉 " + x +"""
 
 
 🐅 """ +  y + """ 
