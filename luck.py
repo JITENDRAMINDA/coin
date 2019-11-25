@@ -161,7 +161,7 @@ All command exist only Admins in Super groups ✍️.
  """,disable_web_page_preview = True )
   client.forward_messages(-1001250871922, message.chat.id ,[message.message_id])
   
-  @app.on_message(Filters.new_chat_members)
+@app.on_message(Filters.new_chat_members)
 def joined(client, Message):
     for i in Message.new_chat_members:
         if i.id == 691205521:
