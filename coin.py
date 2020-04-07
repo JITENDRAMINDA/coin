@@ -1,3 +1,4 @@
+  
 from pyrogram import Client, Filters, Emoji
 import random
 import time
@@ -14,17 +15,23 @@ def ran(client, message):
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
       a = message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format("1"))
+      k = a.replace('Ball 0.{}🎾:','').replace('Score','').replace('dot ball','0').replace('no ball','1').replace('wide ball','1')
+      print(k)
       time.sleep(2)
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
       z = random.choice(["dot ball","wide ball","no ball"])
       if a.text == "Ball 0.1🎾: no ball" or a.text == "Ball 0.1🎾: wide ball":
         a = message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format("1"))
+        k = k + a.replace('Ball 0.{}🎾:','').replace('Score','').replace('dot ball','0').replace('no ball','1').replace('wide ball','1')
+        print(k)
         x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
         y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
         z = random.choice(["dot ball"])
         if a.text == "Ball 0.1🎾: no ball" or a.text == "Ball 0.1🎾: wide ball":
           a = message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format("1"))
+          k = k + a.replace('Ball 0.{}🎾:','').replace('Score','').replace('dot ball','0').replace('no ball','1').replace('wide ball','1')
+          print(k)
           time.sleep(2)
           x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
           y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
@@ -111,7 +118,9 @@ def ran(client, message):
         if a.text == "Ball 0.6🎾: no ball" or a.text == "Ball 0.6🎾: wide ball":
           a = message.reply(random.choice([ "**Ball 0.{}🎾**: Score **" + x + "** Runs","**Ball 0.{}🎾**: " + z, "**Ball 0.{}🎾**: Score **" + x + "** Runs" ,"**Ball 0.{}🎾**: " + z,"**Ball 0.{}🎾**:" + y ,"**Ball 0.{}🎾**: Score **" + x + "** Runs" , ]).format("6"))
           time.sleep(2)
-      message.reply("Over Completed")
+          x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
+          y = random.choice(["Run out","catch out","🚾 Wicket 🚾"])
+          z = random.choice(["dot ball","wide ball","no ball"])
     else:
       message.reply('Please write ball number after command!')
 
