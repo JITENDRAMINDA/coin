@@ -11,13 +11,16 @@ from tg_bot.modules.disable import DisableAbleCommandHandler
 
 @run_async
 @user_admin
-def send(bot: Bot, update: Update):
-    update.message.reply_text = update.effective_update.message.reply_text_to_update.message.reply_text_text if update.effective_update.message.reply_text_to_message else update.effective_update.message.reply_text_text
-    update.message.reply_text(update.effective_message.text.replace("/send",""))
+def toss(bot: Bot, update: Update):
+      x = random.choice(['💫 Result : **Head**', '💫 Result :**Tail** '])
+      y = random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Head**','💫 Result :**Tail** '])
+      z = random.choice(['💫 Result :**Tail** ','💫 Result : **Head**','💫 Result :**Tail** ', '💫 Result : **Head**'])
+      r = random.choice([x,z,y])
+      a = update.message.reply_text("*" + r  + "*",parse_mode=telegram.ParseMode.MARKDOWN)
 
 @run_async
 @user_admin            
-def table(bot: Bot, update: Update):
+def over(bot: Bot, update: Update):
     if len(update.effective_message.text.split(' ')) > 1:
       x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
       y = random.choice(["🚾 Run out 🚾","🚾 Catch out 🚾","🚾 Wicket 🚾"])
@@ -176,7 +179,7 @@ __help__ = """
 
 __mod_name__ = "Extras"
 
-TABLE_HANDLER = DisableAbleCommandHandler("table", table)
+TABLE_HANDLER = DisableAbleCommandHandler("over", over)
 ECHO_HANDLER = DisableAbleCommandHandler("send",send)
 
 dispatcher.add_handler(TABLE_HANDLER)
