@@ -12,11 +12,22 @@ from tg_bot.modules.disable import DisableAbleCommandHandler
 @run_async
 @user_admin
 def toss(bot: Bot, update: Update):
-      x = random.choice(['💫 Result : **Head**', '💫 Result :**Tail** '])
-      y = random.choice(['💫 Result : **Head**', '💫 Result :**Tail** ','💫 Result : **Head**','💫 Result :**Tail** '])
-      z = random.choice(['💫 Result :**Tail** ','💫 Result : **Head**','💫 Result :**Tail** ', '💫 Result : **Head**'])
+      x = random.choice(['💫 Result : Head', '💫 Result :Tail '])
+      y = random.choice(['💫 Result : Head', '💫 Result :Tail ','💫 Result : Head','💫 Result :Tail '])
+      z = random.choice(['💫 Result :Tail ','💫 Result : Head','💫 Result :Tail ', '💫 Result : Head'])
       r = random.choice([x,z,y])
       a = update.message.reply_text("*" + r  + "*",parse_mode=telegram.ParseMode.MARKDOWN)
+
+
+@run_async
+@user_admin            
+def ball(bot: Bot, update: Update):
+    if len(update.effective_message.text.split(' ')) > 1:
+      x = random.choice(["3","2","4","3","2","1","2","3","2","4","6"])
+      y = random.choice(["🚾 Run out 🚾","🚾 Catch out 🚾","🚾 Wicket 🚾"])
+      z = random.choice(["🅾 Dot Ball 🅾","🙅‍♂ No Ball 🙅‍♂","🙆‍♂ Wide Ball 🙆‍♂"])
+      r = random.choice([x,z,x,z,y,x])
+      update.message.reply_text("*Ball 0.1🎾: " + r.replace("2","2⃣ Double 2⃣").replace("3","3⃣ Three 3⃣").replace("4","4⃣ Four 4⃣").replace("6","6⃣ Six Gya Six 6⃣").replace("1","1⃣ Single 1⃣")  + "*",parse_mode=telegram.ParseMode.MARKDOWN)
 
 @run_async
 @user_admin            
@@ -179,8 +190,9 @@ __help__ = """
 
 __mod_name__ = "Extras"
 
-TABLE_HANDLER = DisableAbleCommandHandler("over", over)
-ECHO_HANDLER = DisableAbleCommandHandler("send",send)
-
-dispatcher.add_handler(TABLE_HANDLER)
-dispatcher.add_handler(ECHO_HANDLER)
+OVER_HANDLER = DisableAbleCommandHandler("over", over)
+TOSS_HANDLER = DisableAbleCommandHandler("toss",toss)
+BALL_HANDLER = DisableAbleCommandHandler("ball",ball)
+dispatcher.add_handler(OVER_HANDLER)
+dispatcher.add_handler(TOSS_HANDLER)
+dispatcher.add_handler(BALL_HANDLER)
