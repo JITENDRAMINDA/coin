@@ -17,7 +17,18 @@ def toss(bot: Bot, update: Update):
       z = random.choice(['💫 Result :Tail ','💫 Result : Head','💫 Result :Tail ', '💫 Result : Head'])
       r = random.choice([x,z,y])
       a = update.message.reply_text("*" + r  + "*",parse_mode=telegram.ParseMode.MARKDOWN)
-
+@run_async
+def show(bot: Bot, update: Update):
+    a = random.choice(["1","2","3","4","5","6","7","8","9","10","🅐","🅠","🅚","🅙"]) + random.choice([ "♠️","♣️","♥️","♦️"])
+    b = random.choice(["1","2","3","4","5","6","7","8","9","10","🅐","🅠","🅚","🅙"]) + random.choice([ "♠️","♣️","♥️","♦️"])
+    c = random.choice(["1","2","3","4","5","6","7","8","9","10","🅐","🅠","🅚","🅙"]) + random.choice([ "♠️","♣️","♥️","♦️"])
+    update.message.reply_text("𝓟𝓵𝓪𝔂𝓮𝓻 " + update.message.text.split(" ")[1] + " 𝓒𝓪𝓻𝓭𝓼:
+" + a + " "+ b + " " + c ,  parse_mode=ParseMode.MARKDOWN)
+    a = random.choice(["1","2","3","4","5","6","7","8","9","10","🅐","🅠","🅚","🅙"]) + random.choice([ "♠️","♣️","♥️","♦️"])
+    b = random.choice(["1","2","3","4","5","6","7","8","9","10","🅐","🅠","🅚","🅙"]) + random.choice([ "♠️","♣️","♥️","♦️"])
+    c = random.choice(["1","2","3","4","5","6","7","8","9","10","🅐","🅠","🅚","🅙"]) + random.choice([ "♠️","♣️","♥️","♦️"])
+    update.message.reply_text("𝓟𝓵𝓪𝔂𝓮𝓻 " + update.message.text.split(" ")[2] + " 𝓒𝓪𝓻𝓭𝓼:
+" + a + " "+ b + " " + c, parse_mode=ParseMode.MARKDOWN )
 
 @run_async
 @user_admin            
@@ -193,6 +204,8 @@ __mod_name__ = "Extras"
 OVER_HANDLER = DisableAbleCommandHandler("over", over)
 TOSS_HANDLER = DisableAbleCommandHandler("toss",toss)
 BALL_HANDLER = DisableAbleCommandHandler("ball",ball)
+SHOW_HANDLER = DisableAbleCommandHandler("show",show)
+dispatcher.add_handler(SHOW_HANDLER)
 dispatcher.add_handler(OVER_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
 dispatcher.add_handler(BALL_HANDLER)
