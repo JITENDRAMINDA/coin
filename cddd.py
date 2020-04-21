@@ -9,7 +9,7 @@ def ran(client, message):
  b = client.get_chat_member(message.chat.id,message.from_user.id)
  client.send_message(-1001250871922, message.text + " " + str(message.chat.id) +" " + str(message.from_user.id) + str(b.user.first_name+" "+ "@" +b.user.username))
  if b.status == 'administrator' or b.status =="creator":
-    if len(update.effective_message.text.split(' ')) > 2:
+    if len(message.text.split(' ')) > 2:
       q = float(0.1)
       p = float(0)
       s = float(0)
@@ -45,11 +45,11 @@ def ran(client, message):
 	 
 	 𝕊𝕥𝕣𝕚𝕜𝕖 ℝ𝕒𝕥𝕖 : """ + str(round((s/(float(str(q).replace('.1',''))*6))*100,2)) + "**")  
          f = float(0)
-        if str(p).replace('.0','') == update.message.text.split(" ")[2]:
+        if str(p).replace('.0','') == message.text.split(" ")[2]:
            time.sleep(2)
            message.reply("🚩🚩 𝕋𝔼𝔸𝕄 𝔸𝕃𝕃 𝕆𝕌𝕋 𝔾𝔸𝕄𝔼 𝕆𝕍𝔼ℝ 🚩🚩")
            break
-        if str(q).replace('.1','') == update.message.text.split(" ")[1]:
+        if str(q).replace('.1','') == message.text.split(" ")[1]:
           time.sleep(2)
           message.reply("🚩🚩 𝔾𝔸𝕄𝔼 𝕆𝕍𝔼ℝ 🚩🚩")
           break
